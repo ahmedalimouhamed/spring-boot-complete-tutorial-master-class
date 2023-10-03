@@ -1,0 +1,18 @@
+server:
+  port: 8182
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect:org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/user-registration-spring-security-tutorial
+    username: hbstudent
+    password: hbstudent
+    driver-class-name: com.mysql.jdbc.Driver
+
