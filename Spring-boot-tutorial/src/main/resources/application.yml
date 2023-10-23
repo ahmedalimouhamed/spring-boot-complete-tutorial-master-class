@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: prod
+    active: qa
 
 ---
 
@@ -42,6 +42,14 @@ spring:
     show-sql: true
 welcome:
   message: Welcome to Daily Buffer!!
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
 
 ---
 
