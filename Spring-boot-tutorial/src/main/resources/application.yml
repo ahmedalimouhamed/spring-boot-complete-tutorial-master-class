@@ -1,0 +1,63 @@
+server:
+  port: 8180
+
+spring:
+  profiles:
+    active: prod
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: hbstudent
+    url: jdbc:mysql://localhost:3306/springboot-complete-tutorial
+    username: hbstudent
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+welcome:
+  message: Welcome to Daily Buffer!!
+
+---
+
+spring:
+  profiles: qa
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: hbstudent
+    url: jdbc:mysql://localhost:3306/springboot-complete-tutorial-qa
+    username: hbstudent
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+welcome:
+  message: Welcome to Daily Buffer!!
+
+---
+
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: hbstudent
+    url: jdbc:mysql://localhost:3306/springboot-complete-tutorial-prod
+    username: hbstudent
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+welcome:
+  message: Welcome to Daily Buffer!!
